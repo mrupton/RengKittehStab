@@ -96,8 +96,6 @@ public static void AddItem(MenuItem menuItem)
         }
 
       
-        }
- }
 
      public void combo(bool is3Q)
     {
@@ -106,8 +104,8 @@ public static void AddItem(MenuItem menuItem)
             var useE = Config.Item("UseECombo").GetValue<bool>();
             var stackPrior = Config.Item("stackPriority").GetValue<StringList>().SelectedIndex;
             var eTarget = TargetSelector.GetTarget(E.Range, TargetSelector.DamageType.Physical);
-            var aaTarget = TargetSelector.GetTarget(Orbwalking.GetRealAutoAttackRange(Player) + 175, TargetSelector.DamageType.Phy
-
+            var aaTarget = TargetSelector.GetTarget(Orbwalking.GetRealAutoAttackRange(Player) + 175, TargetSelector.DamageType.Physical);
+ 
     if (eTarget != null)
             {
                 if (is3Q)
@@ -153,7 +151,10 @@ public static void AddItem(MenuItem menuItem)
                     {
                         W.CastOnUnit(Player, pCast);
                     }
-                }
-            }
 
-        }
+                }
+                                }
+                    }
+                }
+                //castItems(minion);
+            }
